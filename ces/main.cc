@@ -195,7 +195,7 @@ int main(int argc, char *argv[]) {
     LOG_INFO << "main into";
     LOG_INFO << "listening: "<<http_bind_ip<<" port: "<<http_bind_port<<'\n';
     
-     // 初始化mysql、redis连接池，内部也会读取读取配置文件tc_http_server.conf
+     // 初始化mysql、redis连接池，内部也会读取读取配置文件http_server.conf
     CacheManager::SetConfPath(str_tc_http_server_conf); //设置配置文件路径
     CacheManager *cache_manager = CacheManager::getInstance();
     if (!cache_manager) {
